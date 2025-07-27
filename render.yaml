@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: Arslan-XD-bot
+    env: docker
+    plan: free
+    buildCommand: "docker build -t Arslan-XD-bot ."
+    startCommand: "docker run Arslan-XD-bot"
+    dockerfilePath: ./Dockerfile
+    gitRepo:
+      branch: main
+      repo: https://github.com/Arslan-MD/Arslan-XD
+    autoDeploy: true
+    healthCheckPath: /health
+    # Optional: Specify environment variables
+    envVars:
+      - key: SESSION_ID
+        value: "your_session_id_here"
+      - key: AUTO_BLOCK
+        value: "false"
+      - key: MODE
+        value: "public"
+      - key: AUTO_READ
+        value: "false"
+      - key: AUTO_STATUS_SEEN
+        value: "true"
