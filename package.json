@@ -2,6 +2,7 @@
   "name": "Arslan-XD",
   "version": "1.0.0",
   "description": "Simple WhatsApp Bot",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
