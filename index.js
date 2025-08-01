@@ -1,6 +1,4 @@
-import { createRequire } from 'module';
-const require = createRequire(import.meta.url);
-const config = require('./config.cjs');
+import config from './config.cjs';
 
 import {
     makeWASocket,
@@ -9,6 +7,7 @@ import {
     DisconnectReason,
     useMultiFileAuthState,
 } from '@whiskeysockets/baileys';
+
 import { Handler, Callupdate, GroupUpdate } from './src/event/index.js';
 import express from 'express';
 import pino from 'pino';
@@ -18,7 +17,6 @@ import path from 'path';
 import chalk from 'chalk';
 import moment from 'moment-timezone';
 import axios from 'axios';
-import config from './config.cjs';
 import pkg from './lib/autoreact.cjs';
 const { emojis, doReact } = pkg;
 
