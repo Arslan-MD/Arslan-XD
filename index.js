@@ -1,5 +1,5 @@
-import dotenv from 'dotenv';
-dotenv.config();
+import config from './config.cjs' assert { type: "json" };
+global.config = config;
 
 import {
     makeWASocket,
